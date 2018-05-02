@@ -16,3 +16,7 @@ steps:
     targetFolder: '$(build.artifactStagingDirectory)'
 
 - task: 2ff763a7-ce83-4e1f-bc89-0ae63477cebe@1 #PublishBuildArtifacts@1
+  inputs:
+    artifactName: drop
+    pathToPublish: '$(build.artifactStagingDirectory)'
+    publishLocation: container
