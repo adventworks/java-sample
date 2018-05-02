@@ -15,4 +15,4 @@ steps:
     contents: '**/*.jar'
     targetFolder: '$(build.artifactStagingDirectory)'
 
-- task: PublishBuildArtifacts@1
+- task: 2ff763a7-ce83-4e1f-bc89-0ae63477cebe@1 #PublishBuildArtifacts@1
