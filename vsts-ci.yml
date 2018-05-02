@@ -1,0 +1,18 @@
+# Maven
+# Build your Java projects and run tests with Apache Maven.
+# https://aka.ms/yaml
+
+queue: 'Hosted Linux Preview'
+steps:
+
+- task: Maven@2
+  inputs:
+    mavenPomFile: 'pom.xml'
+    goals: 'package'
+
+- task: CopyFiles@2
+  inputs:
+    contents: '**/*.jar'
+    targetFolder: '$(build.artifactStagingDirectory)'
+
+- task: PublishBuildArtifacts@1
